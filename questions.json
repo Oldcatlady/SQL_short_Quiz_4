@@ -1,0 +1,137 @@
+[
+{
+  "question": "Welches Schlüsselwort wird oft mit Subqueries verwendet?",
+  "type": "text",
+  "answer": "IN",
+  "explanation": "IN wird häufig genutzt, um mehrere Werte zu vergleichen."
+},
+{
+  "question": "Was macht IN?",
+  "type": "mc",
+  "options": [
+    "Vergleicht einen Wert",
+    "Vergleicht mehrere Werte",
+    "Sortiert Daten",
+    "Gruppiert Daten"
+  ],
+  "answer": "Vergleicht mehrere Werte",
+  "explanation": "IN prüft, ob ein Wert in einer Liste enthalten ist."
+},
+{
+  "question": "Schreibe eine IN-Bedingung:",
+  "type": "copy",
+  "options": [
+    "WHERE stadt IN ('Berlin','Hamburg')",
+    "WHERE stadt = ('Berlin','Hamburg')",
+    "WHERE stadt HAS Berlin"
+  ],
+  "answer": "WHERE stadt IN ('Berlin','Hamburg')",
+  "explanation": "IN prüft mehrere Werte gleichzeitig."
+},
+{
+  "question": "Was macht eine Subquery im WHERE?",
+  "type": "mc",
+  "options": [
+    "Sortiert Daten",
+    "Liefert Werte für Vergleich",
+    "Gruppiert Daten",
+    "Löscht Daten"
+  ],
+  "answer": "Liefert Werte für Vergleich",
+  "explanation": "Das Ergebnis der Subquery wird im WHERE genutzt."
+},
+{
+  "question": "Was macht EXISTS?",
+  "type": "mc",
+  "options": [
+    "Prüft ob Daten existieren",
+    "Sortiert Daten",
+    "Zählt Daten",
+    "Gruppiert Daten"
+  ],
+  "answer": "Prüft ob Daten existieren",
+  "explanation": "EXISTS prüft, ob eine Subquery Ergebnisse liefert."
+},
+{
+  "question": "Wann ist EXISTS TRUE?",
+  "type": "mc",
+  "options": [
+    "Wenn keine Daten vorhanden sind",
+    "Wenn mindestens ein Datensatz existiert",
+    "Wenn alle Werte gleich sind",
+    "Wenn NULL vorhanden ist"
+  ],
+  "answer": "Wenn mindestens ein Datensatz existiert",
+  "explanation": "EXISTS ist TRUE, sobald die Subquery ein Ergebnis hat."
+},
+{
+  "question": "Was macht COUNT(*) bei NULL-Werten?",
+  "type": "mc",
+  "options": [
+    "Ignoriert NULL",
+    "Zählt alle Zeilen",
+    "Fehler",
+    "Sortiert NULL"
+  ],
+  "answer": "Zählt alle Zeilen",
+  "explanation": "COUNT(*) zählt jede Zeile, auch mit NULL."
+},
+{
+  "question": "Was macht COUNT(spalte) bei NULL?",
+  "type": "mc",
+  "options": [
+    "Zählt alle",
+    "Ignoriert NULL-Werte",
+    "Fehler",
+    "Sortiert Werte"
+  ],
+  "answer": "Ignoriert NULL-Werte",
+  "explanation": "Nur nicht-NULL Werte werden gezählt."
+},
+{
+  "question": "Schreibe eine Subquery-Struktur:",
+  "type": "copy",
+  "options": [
+    "SELECT * FROM tabelle WHERE id IN (SELECT id FROM tabelle2)",
+    "SELECT FROM WHERE SUB",
+    "JOIN SUBQUERY"
+  ],
+  "answer": "SELECT * FROM tabelle WHERE id IN (SELECT id FROM tabelle2)",
+  "explanation": "Subqueries stehen oft in Klammern im WHERE."
+},
+{
+  "question": "Was ist der Unterschied zwischen IN und EXISTS?",
+  "type": "mc",
+  "options": [
+    "Kein Unterschied",
+    "IN vergleicht Werte, EXISTS prüft Existenz",
+    "EXISTS sortiert",
+    "IN gruppiert"
+  ],
+  "answer": "IN vergleicht Werte, EXISTS prüft Existenz",
+  "explanation": "IN nutzt Werte, EXISTS prüft nur ob etwas da ist."
+},
+{
+  "question": "Wann nutzt man LEFT JOIN statt INNER JOIN?",
+  "type": "mc",
+  "options": [
+    "Wenn nur Matches wichtig sind",
+    "Wenn alle linken Daten erhalten bleiben sollen",
+    "Zum Sortieren",
+    "Zum Zählen"
+  ],
+  "answer": "Wenn alle linken Daten erhalten bleiben sollen",
+  "explanation": "LEFT JOIN zeigt auch Datensätze ohne Match."
+},
+{
+  "question": "Schreibe einen LEFT JOIN:",
+  "type": "copy",
+  "options": [
+    "FROM kunden LEFT JOIN bestellungen ON kunden.id = bestellungen.kunden_id",
+    "FROM kunden JOIN LEFT bestellungen",
+    "LEFT kunden TO bestellungen"
+  ],
+  "answer": "FROM kunden LEFT JOIN bestellungen ON kunden.id = bestellungen.kunden_id",
+  "explanation": "LEFT JOIN verbindet Tabellen mit Erhalt der linken Seite."
+}
+]
